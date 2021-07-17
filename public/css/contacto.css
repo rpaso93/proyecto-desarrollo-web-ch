@@ -1,0 +1,201 @@
+h2 {
+  margin: 1rem;
+}
+
+.flex {
+  display: flex !important;
+  flex-flow: column;
+  margin-top: 6rem;
+}
+
+
+.flex > iframe {
+  min-height: 300px;
+  min-width: 400px;
+}
+
+.info {
+  display: flex;
+  flex-flow: column;
+
+  padding: 1.5rem;
+  background-color: rgb(104, 64, 45);
+  color: white;
+}
+
+.info > p {
+  padding: 2rem;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  margin: 0 auto;
+}
+
+.formulario > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.formulario__input,
+.formulario__controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  margin: 0.33rem;
+  overflow-x: hidden;
+  margin: 1rem;
+}
+
+.formulario__input.with--textarea {
+  height: 260px;
+  padding-top: 3.2rem;
+  overflow: hidden;
+}
+
+.formulario__input > label {
+  position: absolute;
+  bottom: 0;
+  left: -1%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 0.18rem solid #bbbbbb;
+}
+
+.formulario__input > label:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  bottom: -0.18rem;
+  border-bottom: 0.18rem solid #4388b6;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+}
+
+.formulario__controls {
+  justify-content: center;
+}
+
+.formulario__input > input {
+  width: 100%;
+  height: 1.7rem;
+  position: absolute;
+  bottom: 0;
+  padding: 0.2rem 0.3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.formulario__input > select {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.7rem;
+  padding: 0.2rem 0.3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.formulario__input > select > option {
+  background-color: transparent;
+}
+
+.formulario__input > textarea {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  position: absolute;
+  bottom: 0;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  border: none;
+  outline: none;
+  font-family: 'Gotham Book';
+  background-color: transparent;
+  font-size: 1.05rem;
+}
+
+.formulario__input > input:focus + label:after,
+.formulario__input > input:valid + label:after,
+.formulario__input > select:focus + label:after,
+.formulario__input > select:valid + label:after,
+.formulario__input > textarea:focus + label:after,
+.formulario__input > textarea:valid + label:after {
+  transform: translateX(0%);
+}
+
+.formulario__input > label > span {
+  position: absolute;
+  bottom: 0px;
+  left: 6px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.formulario__input > textarea + label > span {
+  position: absolute;
+  top: 0;
+  transform: translateY(88.5%);
+  left: 1%;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.formulario__input > input:focus + label > span,
+.formulario__input > input:valid + label > span,
+.formulario__input > select:focus + label > span,
+.formulario__input > select:valid + label > span {
+  transform: translateY(-125%);
+  font-size: 1rem;
+  color: #2e2e2e;
+}
+
+.formulario__input > textarea:focus + label > span,
+.formulario__input > textarea:valid + label > span {
+  font-size: 1rem;
+  color: #678ba3;
+  transform: translateY(0%);
+}
+
+@media screen and (min-width: 600px) {
+  .flex {
+    flex-flow: row;
+  }
+
+  .flex > iframe {
+    min-height: auto;
+  }
+  .formulario {
+    flex-direction: row;
+    min-width: 80%;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .formulario > div {
+    margin: 1rem;
+  }
+  .info {  
+    padding: 3rem 2rem;
+  }
+}

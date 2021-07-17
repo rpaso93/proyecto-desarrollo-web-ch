@@ -1,0 +1,233 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header.header--fixed {
+  position: fixed;
+}
+
+.navbar {
+  height: 72px;
+  width: 100%;
+  display: flex;
+  padding: 0 calc(100% - 100vw);
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #ffffff00;
+  /* box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.15); */
+}
+
+.navbar.navbar--white {
+  background-color: #ffffff;
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.15);
+}
+
+.navbar--mobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0;
+  height: 100vh;
+  max-width: 16rem;
+  background-color: #ffffff;
+  box-shadow: 3px 0px 12px 1px rgba(0, 0, 0, 0.15);
+  animation: open 300ms ease-in-out forwards;
+}
+
+@keyframes open {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+.navbar__logo {
+  margin: 1rem;
+}
+
+.navbar--mobile > .navbar__logo {
+  display: none;
+}
+
+.navbar__logo > a {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.navbar > .navbar__logo > a > svg > path {
+  fill: white;
+}
+
+.navbar.navbar--white > .navbar__logo > a > svg > path {
+  fill: black;
+}
+
+.navbar__bars {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  height: 50%;
+  width: 30px;
+  top: 50%;
+  left: 0%;
+  transform: translate(80%, -50%);
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.navbar__bars > span {
+  background-color: white;
+  height: 10%;
+  width: 100%;
+  border-radius: 99px;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.navbar__bars > span.navbar__bars__bar--1 {
+  margin: 0.2rem;
+}
+.navbar__bars > span.navbar__bars__bar--2 {
+  margin: 0.2rem;
+}
+.navbar__bars > span.navbar__bars__bar--3 {
+  margin: 0.2rem;
+}
+
+.navbar__bars.active > span.navbar__bars__bar--1 {
+  margin: 0;
+  transform: rotate(45deg) translateY(0.25rem);
+  background-color: black;
+}
+.navbar__bars.active > span.navbar__bars__bar--2 {
+  margin: 0;
+  transform: rotate(-45deg) translateY(-0.14rem) translateX(-0.18rem);
+  background-color: black;
+}
+.navbar__bars.active > span.navbar__bars__bar--3 {
+  margin: 0;
+  transform: rotate(-45deg) translateY(-0.34rem) translateX(-0.07rem);
+  background-color: black;
+}
+
+.navbar--mobile > .navbar__logo > a {
+  color: black;
+}
+
+.navbar.navbar--white > .navbar__logo > a {
+  color: black;
+}
+
+.navbar__logo > a > svg {
+  margin-right: 1rem;
+}
+
+.navbar__list {
+  display: none;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navbar.navbar--mobile > .navbar__list {
+  display: block;
+  align-self: center;
+  margin-top: 4.5rem;
+  width: 100%;
+  border-top: 1px solid rgb(153, 153, 153);
+}
+
+.navbar__list > li {
+  position: relative;
+  padding: 1rem;
+  margin: 0.33rem;
+}
+
+.navbar.navbar--mobile > .navbar__list > li {
+  margin: 0;
+}
+
+.navbar__list > li > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar__list.navbar__list--white > li > a {
+  color: #000000;
+}
+
+.navbar__list > li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+  width: 100%;
+  border-bottom: 0.33rem solid rgb(65, 116, 157);
+  transform-origin: left;
+  transform: scaleX(0%);
+  transition: transform 300ms ease-in-out;
+}
+
+.navbar__list > li:hover::after,
+.navbar__list > li.active::after {
+  transform: scaleX(100%);
+}
+
+.navbar__list > li:hover > a {
+  font-weight: 700;
+}
+
+.navbar > .navbar__logo:hover > a > svg > path,
+.navbar > .navbar__logo:hover > a,
+.navbar.navbar--white > .navbar__logo:hover > a > svg > path,
+.navbar.navbar--white > .navbar__logo:hover > a {
+  color: #41749d;
+  fill: #41749d;
+}
+
+.navbar.navbar--mobile > .navbar__list > li::after {
+  border-bottom: 0;
+  height: 100%;
+  background-color: rgba(65, 116, 157, 0.1);
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    padding: 0 calc(100% - 95vw);
+    justify-content: space-between;
+  }
+  .navbar__list {
+    display: flex;
+  }
+  .navbar__bars {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 924px) {
+  .navbar {
+    padding: 0 calc(100% - 90vw);
+  }
+}
+
+@media screen and (min-width: 1324px) {
+  .navbar {
+    padding: 0 calc(100% - 85vw);
+  }
+}
