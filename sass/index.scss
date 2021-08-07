@@ -1,0 +1,88 @@
+@use 'colors' as c;
+@import 'media';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {  
+  background-color: c.$body;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  line-height: 1;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem calc(100% - 98vw);
+
+  &:nth-child(even){
+    background-color: c.$white;
+  }
+
+  & > h2 {
+    text-align: center;
+    color: c.$primary;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+  
+  @include respond(small){
+    padding: 2.5rem calc(100% - 95vw);
+  }
+  @include respond(medium){
+    padding: 2.5rem calc(100% - 90vw);
+  }
+  @include respond(large){
+    padding: 2.5rem calc(100% - 80vw);
+  }
+}
+
+ul {
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+
+
+.button {
+  padding: 0.6rem 1rem;
+  border-radius: 3px;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.5rem;
+  transition: background-color 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+  
+  &.button--primary {
+    background-color: c.$primary;
+    color: c.$white;
+    &:hover {
+      background-color: darken($color: c.$primary, $amount: 15);
+    }
+  }
+  
+  &.button--secondary {
+    background-color: c.$secondary;
+    color: c.$white;
+  }
+  
+  &.button--secondary:hover {
+    background-color: darken($color: c.$secondary, $amount: 15);
+  }
+}
+
+

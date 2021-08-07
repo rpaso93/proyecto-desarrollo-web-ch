@@ -1,0 +1,56 @@
+.image-section {
+  min-height: 25rem;
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 0;
+  overflow: hidden;
+  & > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+.image-section__content {
+  padding-top: 2rem;
+  padding-bottom: 0;
+  backdrop-filter: blur(2px);
+  color: white;
+  & > h2 {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+    font-size: 1.9rem;
+  }
+  & > div {
+    padding: 1.8rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #2c4f6be0;
+    & > h2 {
+      color: #e1734b;
+      font-weight: 800;
+    }
+  }
+}
+
+.objetivos {
+  display: flex;
+  flex-flow: column nowrap;
+  & > h3 {
+    text-align: center;
+  }
+  & > div {
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-between;
+    & > div {
+      margin: 1rem;
+    }
+  }
+}

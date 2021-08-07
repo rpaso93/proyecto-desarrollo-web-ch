@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Americanas - Galeria</title> <!-- Agregue un titulo para cada seccion  -->
+    <title>Americanas - Galeria</title>
+    <!-- Agregue un titulo para cada seccion  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
@@ -14,6 +19,14 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="public/css/index.css" />
     <link rel="stylesheet" href="public/css/nav.css" />
@@ -23,64 +36,65 @@
   <body>
     <header class="header">
       <nav class="navbar navbar--white">
-        <span class="navbar__logo"
-          ><a href="index.html"
-            ><svg
-              width="38"
-              height="33"
-              viewBox="0 0 38 33"
+        <span class="navbar__logo">
+          <a href="index.html">
+            <svg
+              width="112"
+              height="58"
+              viewBox="0 0 412 146"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M25.2561 22.9022L29.1001 32.9117L37.5929 25.0883L26.7271 21.5472L25.2561 22.9022ZM4 1.00826C3.42554 1.00826 2.95985 1.43725 2.95985 1.96643V10.59C2.95985 11.1191 3.42554 11.5481 4 11.5481C4.57446 11.5481 5.04015 11.1191 5.04015 10.59L5.04015 2.9246H13.3613C13.9358 2.9246 14.4015 2.49561 14.4015 1.96643C14.4015 1.43725 13.9358 1.00826 13.3613 1.00826H4ZM27.4626 22.2247L4.7355 1.2889L3.26451 2.64396L25.9916 23.5798L27.4626 22.2247Z"
+                d="M144.155 39.198C143.487 38.495 134.238 18.284 128.065 4.04C127.032 1.656 126.576 -0.143999 127.052 0.0400009C133.687 2.595 164.961 18.43 164.582 19.042C164.3 19.499 161.958 19.905 159.378 19.943C149.2 20.096 148.796 19.416 174.71 45.749L198.56 69.985L222.886 45.679C249.214 19.373 248.673 20.235 239.019 19.973C230.74 19.748 231.727 18.698 247.331 11.128C255.777 7.03 264.57 2.85 266.872 1.839L271.057 0L267.57 8.186C259.617 26.856 253.91 38.82 253.174 38.365C252.743 38.099 252.074 34.729 251.687 30.877C251.301 27.025 250.696 23.873 250.343 23.873C249.99 23.873 238.787 34.781 225.446 48.114L201.189 72.355L218.923 90.11L236.657 107.864L249.172 111.993C261.852 116.177 265.393 117.873 261.446 117.873C257.045 117.873 258.451 119.636 264.252 121.393C267.551 122.392 269.899 123.56 269.469 123.989C269.039 124.419 266.002 125.469 262.721 126.323C259.44 127.177 256.163 128.469 255.439 129.193C254.714 129.917 253.081 133.854 251.808 137.941L249.495 145.373L247.718 139.373C245.323 131.282 245.012 130.941 243.66 134.928L242.491 138.373L240.781 132.373C239.84 129.073 237.986 122.773 236.661 118.373L234.251 110.373L216.446 92.61L198.64 74.847L181.006 92.61L163.371 110.373L160.819 118.873C159.415 123.548 157.705 129.51 157.019 132.123C156.333 134.736 155.502 136.873 155.173 136.873C154.843 136.873 154.106 135.635 153.535 134.123C152.531 131.464 152.434 131.579 150.592 137.622C149.544 141.058 148.409 143.871 148.069 143.872C147.729 143.872 146.67 141.061 145.716 137.623C143.605 130.02 142.077 128.172 136.778 126.822C134.528 126.249 131.364 125.26 129.746 124.626C126.825 123.48 126.85 123.459 133.746 121.321C140.06 119.364 140.438 119.101 137.937 118.413C136.425 117.997 135.187 117.355 135.187 116.986C135.187 116.617 140.925 114.421 147.937 112.107L160.687 107.898L178.111 90.451L195.535 73.004L184.431 61.188C164.011 39.461 147.511 23.586 146.928 25.106C146.629 25.886 146.058 29.562 145.661 33.274C145.263 36.986 144.586 39.652 144.155 39.198Z"
                 fill="black"
               />
               <path
-                d="M11.273 21.4382L0.407119 24.9793L8.89992 32.8027L12.744 22.7932L11.273 21.4382ZM35.0401 1.85736C35.0401 1.32818 34.5744 0.899196 34 0.899197L24.6386 0.899214C24.0642 0.899215 23.5985 1.3282 23.5985 1.85739C23.5985 2.38657 24.0642 2.81555 24.6387 2.81555L32.9598 2.81554L32.9599 10.4809C32.9599 11.0101 33.4256 11.4391 34 11.4391C34.5745 11.4391 35.0402 11.0101 35.0402 10.4809L35.0401 1.85736ZM12.0085 23.4708L34.7355 2.53489L33.2645 1.17984L10.5375 22.1157L12.0085 23.4708Z"
+                d="M36.4372 85.677C11.2742 85.57 -4.58784 85.208 1.18716 84.873C19.8862 83.789 82.1872 83.789 82.1872 84.873C82.1872 85.528 66.4012 85.805 36.4372 85.677Z"
                 fill="black"
-              /></svg
-            >Americanas</a
-          ></span
-        >
+              />
+              <path
+                d="M361.437 85.7C331.155 85.813 315.187 85.528 315.187 84.873C315.187 83.732 377.479 83.7 396.187 84.832C403.526 85.276 390.951 85.59 361.437 85.7Z"
+                fill="black"
+              />
+            </svg>
+          </a>
+        </span>
         <ul class="navbar__list navbar__list--white">
           <li><a href="productos.html">Productos</a></li>
-          <li class="active"><a href="galeria.html">Galeria</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
           <li>
             <a href="sobre-nosotros.html">Sobre Nosotros</a>
           </li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
-        <span class="navbar__bars" id="sidebar_btn">
-          <span class="navbar__bars__bar--1"></span
-          ><span class="navbar__bars__bar--2"></span
-          ><span class="navbar__bars__bar--3"></span>
-        </span>
+        <div class="navbar__btn-container" id="sidebar_btn">
+          <div class="navbar__btn">
+            <span class="navbar__btn__bar"></span>
+          </div>
+        </div>
       </nav>
       <nav id="sidebar" class="navbar navbar--mobile">
         <span class="navbar__logo"
           ><a href="index.html"
             ><svg
-              width="38"
-              height="33"
-              viewBox="0 0 38 33"
+              width="52"
+              height="52"
+              viewBox="0 0 200 136"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M25.2561 22.9022L29.1001 32.9117L37.5929 25.0883L26.7271 21.5472L25.2561 22.9022ZM4 1.00826C3.42554 1.00826 2.95985 1.43725 2.95985 1.96643V10.59C2.95985 11.1191 3.42554 11.5481 4 11.5481C4.57446 11.5481 5.04015 11.1191 5.04015 10.59L5.04015 2.9246H13.3613C13.9358 2.9246 14.4015 2.49561 14.4015 1.96643C14.4015 1.43725 13.9358 1.00826 13.3613 1.00826H4ZM27.4626 22.2247L4.7355 1.2889L3.26451 2.64396L25.9916 23.5798L27.4626 22.2247Z"
-                fill="black"
-              />
-              <path
-                d="M11.273 21.4382L0.407119 24.9793L8.89992 32.8027L12.744 22.7932L11.273 21.4382ZM35.0401 1.85736C35.0401 1.32818 34.5744 0.899196 34 0.899197L24.6386 0.899214C24.0642 0.899215 23.5985 1.3282 23.5985 1.85739C23.5985 2.38657 24.0642 2.81555 24.6387 2.81555L32.9598 2.81554L32.9599 10.4809C32.9599 11.0101 33.4256 11.4391 34 11.4391C34.5745 11.4391 35.0402 11.0101 35.0402 10.4809L35.0401 1.85736ZM12.0085 23.4708L34.7355 2.53489L33.2645 1.17984L10.5375 22.1157L12.0085 23.4708Z"
+                d="M45.191 39.702C44.523 38.999 35.274 18.788 29.101 4.544C28.068 2.16 27.612 0.359999 28.088 0.543999C34.723 3.099 65.997 18.934 65.618 19.546C65.336 20.003 62.994 20.409 60.414 20.447C50.236 20.6 49.832 19.92 75.746 46.253L99.596 70.489L123.922 46.183C150.25 19.877 149.709 20.739 140.055 20.477C131.776 20.252 132.763 19.202 148.367 11.632C156.813 7.534 165.606 3.354 167.908 2.343L172.093 0.503998L168.606 8.69C160.653 27.36 154.946 39.324 154.21 38.869C153.779 38.603 153.11 35.233 152.723 31.381C152.337 27.529 151.732 24.377 151.379 24.377C151.026 24.377 139.823 35.285 126.482 48.618L102.225 72.859L119.959 90.614L137.693 108.368L150.208 112.497C162.888 116.681 166.429 118.377 162.482 118.377C158.081 118.377 159.487 120.14 165.288 121.897C168.587 122.896 170.935 124.064 170.505 124.493C170.075 124.923 167.038 125.973 163.757 126.827C160.476 127.681 157.199 128.973 156.475 129.697C155.75 130.421 154.117 134.358 152.844 138.445L150.531 145.877L148.754 139.877C146.359 131.786 146.048 131.445 144.696 135.432L143.527 138.877L141.817 132.877C140.876 129.577 139.022 123.277 137.697 118.877L135.287 110.877L117.482 93.114L99.676 75.351L82.042 93.114L64.407 110.877L61.855 119.377C60.451 124.052 58.741 130.014 58.055 132.627C57.369 135.24 56.538 137.377 56.209 137.377C55.879 137.377 55.142 136.139 54.571 134.627C53.567 131.968 53.47 132.083 51.628 138.126C50.58 141.562 49.445 144.375 49.105 144.376C48.765 144.376 47.706 141.565 46.752 138.127C44.641 130.524 43.113 128.676 37.814 127.326C35.564 126.753 32.4 125.764 30.782 125.13C27.861 123.984 27.886 123.963 34.782 121.825C41.096 119.868 41.474 119.605 38.973 118.917C37.461 118.501 36.223 117.859 36.223 117.49C36.223 117.121 41.961 114.925 48.973 112.611L61.723 108.402L79.147 90.955L96.571 73.508L85.467 61.692C65.047 39.965 48.547 24.09 47.964 25.61C47.665 26.39 47.094 30.066 46.697 33.778C46.299 37.49 45.622 40.156 45.191 39.702Z"
                 fill="black"
               /></svg
             >Americanas</a
           ></span
         >
         <ul class="navbar__list navbar__list--white">
+          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="productos.html">Productos</a></li>
-          <li class="active"><a href="galeria.html">Galeria</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
           <li>
             <a href="sobre-nosotros.html">Sobre Nosotros</a>
           </li>
@@ -89,7 +103,6 @@
       </nav>
     </header>
     <main>
-      <br /><br /><br />
       <section>
         <h2>Galeria</h2>
         <div class="galeria">
@@ -97,16 +110,17 @@
             <img src="public/images/matera.jpeg" alt="" />
           </div>
           <div class="galeria__item">
-            <img src="public/images/WhatsApp Image 2021-06-18 at 17.16.53.jpeg"
-            // TODO Cambiar los nombres de las fotos, los link tienen espacios
-            en blanco alt="" />
+            <img
+              src="public/images/cartuchera-marron.jpeg"
+              alt=""
+            />
           </div>
           <div class="galeria__item">
             <img src="public/images/estanteria.jpeg" alt="" />
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.17.00.jpeg"
+              src="public/images/cartuchera-myb-3.jpeg"
               alt=""
             />
           </div>
@@ -115,7 +129,7 @@
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.17.06.jpeg"
+              src="public/images/bolso-claro-alt-2.jpeg"
               alt=""
             />
           </div>
@@ -126,7 +140,7 @@
             <img src="public/images/maquina.jpeg" alt="" />
           </div>
           <div class="galeria__item">
-            <img src="public/images/billetera.jpeg" alt="" />
+            <img src="public/images/bolso-claro-alt.jpeg" alt="" />
           </div>
           <div class="galeria__item">
             <img src="public/images/maquina-corte.jpeg" alt="" />
@@ -142,13 +156,13 @@
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.17.03.jpeg"
+              src="public/images/bolso-claro-alt-3.jpeg"
               alt=""
             />
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.17.17.jpeg"
+              src="public/images/bolso-marron-obscuro.jpeg"
               alt=""
             />
           </div>
@@ -160,25 +174,25 @@
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.16.59.jpeg"
+              src="public/images/bolso-negro-alt-1.jpeg"
               alt=""
             />
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.16.55.jpeg"
+              src="public/images/cinto-obscuro.jpeg"
               alt=""
             />
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.16.56.jpeg"
+              src="public/images/cartuchera-marron-2.jpeg"
               alt=""
             />
           </div>
           <div class="galeria__item">
             <img
-              src="public/images/WhatsApp Image 2021-06-18 at 17.17.04.jpeg"
+              src="public/images/bolso-claro-alt-1.jpeg"
               alt=""
             />
           </div>
@@ -188,19 +202,34 @@
           <div class="galeria__item">
             <img src="public/images/bandolera.jpeg" alt="" />
           </div>
+          <div class="galeria__item">
+            <img src="public/images/pegando.jpeg" alt="" />
+          </div>
+          <div class="galeria__item">
+            <img src="public/images/bolso-claro-1.jpeg" alt="" />
+          </div>
+          <div class="galeria__item">
+            <img src="public/images/billetera.jpeg" alt="" />
+          </div>
+          <div class="galeria__item">
+            <img src="public/images/billetera-negra.jpeg" alt="" />
+          </div>
+          <div class="galeria__item">
+            <img src="public/images/bolso-claro.jpeg" alt="" />
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <span>Direccion</span>
-      <span>Email</span>
-      <span>Telefono</span>
+      <span><i class="bi bi-geo-alt-fill"></i>Direccion</span>
+      <span><i class="bi bi-envelope-fill"></i>Email</span>
+      <span><i class="bi bi-telephone-fill"></i>Telefono</span>
       <ul class="social-list">
-        <li>Redes</li>
-        <li>Redes</li>
-        <li>Redes</li>
+        <li><i class="bi bi-instagram"></i> @americanastl</li>
       </ul>
     </footer>
-    <script src="public/js/sidebar.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/sidebar.js"></script>
+    <script src="/public/js/gallery.js"></script>
   </body>
 </html>

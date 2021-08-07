@@ -1,0 +1,148 @@
+@use 'colors' as c;
+@import 'media';
+
+#slider {
+  padding: 0;
+  & > div {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 2.5rem;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+      align-items: center;
+      & > h1 {
+        color: c.$white;
+        font-size: 1.9rem;
+        margin: 1rem 0;
+      }
+      & > svg {
+        height: 12rem;
+        width: 18rem;
+        & > path {
+          fill: c.$white;
+        }
+      }
+    }
+    & > span {
+      position: absolute;
+      bottom: 0%;
+      height: 2.5rem;
+      width: 100vw;
+      background-image: linear-gradient(transparent, c.$white 100%);
+    }
+  }
+}
+
+.products {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+    
+    &:hover > svg > path {
+      fill: c.$primary;
+      transition: fill 300ms ease-in-out;
+    }
+  }
+}
+
+.products-list {
+  max-height: 320px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-inline-start: 0;
+  overflow: hidden;
+  margin: 0 1rem;
+  scroll-behavior: smooth;
+  & > li {
+    height: 230px;  
+    min-width: 18rem;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > img {
+      max-height: 100%;
+      max-width: 90%;
+      object-fit: contain;
+      object-position: center;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+.article {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  & > img {
+    background-color: transparent;
+    image-rendering: optimizeQuality;
+    max-width: 460px;
+    max-height: 320px;
+    width: 100%;
+    object-fit: contain;
+  }
+  & > div {
+    position: relative;
+    flex: 0.8;
+    padding: 2rem 1.5rem;
+    background-color: c.$primary;
+    color: c.$white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+  }
+  &:nth-child(3n) > div {
+    background-color: c.$secondary;
+  }
+  
+  &:nth-child(4n) > div {
+    background-color: c.$tertiary;
+  }
+
+  @include respond(medium) {
+    & {
+      flex-direction: row;
+    }
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    & > img {
+      background-color: transparent;
+      image-rendering: optimizeQuality;
+      max-height: 490px;
+      width: auto;
+      border-radius: 3px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+  }
+}

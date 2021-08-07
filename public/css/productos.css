@@ -1,3 +1,15 @@
+h2 {
+  margin-top: 8rem;
+  text-align: center;
+  font-weight: 900;
+  color: #41749d;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
 .article {
   margin: 1rem 0;
   display: flex;
@@ -5,49 +17,64 @@
   justify-content: space-around;
   align-items: center;
 }
-
-.article > img {
+.article .carousel-item {
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+}
+.article .carousel-item img {
+  width: 100%;
+}
+.article img {
   background-color: transparent;
   image-rendering: optimizeQuality;
   max-width: 460px;
   max-height: 320px;
-  width: 100%;
-  object-fit: contain;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-
-.article > div {
-  flex: 0.8;
+.article > .description {
+  width: 50%;
   padding: 2rem 1.5rem;
   background-color: #41749d;
-  color: white;
+  color: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
 }
-
-.article:nth-child(3n) > div {
-  background-color: #313335;
+.article:nth-child(3n) > .description {
+  background-color: #414141;
 }
-
-.article:nth-child(4n) > div {
+.article:nth-child(4n) > .description {
   background-color: #593e34;
 }
-
-@media screen and (min-width: 790px) {
+@media (min-width: 924px) {
   .article {
     flex-direction: row;
-    animation: fadeInRight;
-    animation-duration: 1s; 
+    -webkit-animation: fadeInRight;
+            animation: fadeInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
   .article:nth-child(odd) {
     flex-direction: row-reverse;
-    animation: fadeInLeft;
-    animation-duration: 1s; 
+    -webkit-animation: fadeInLeft;
+            animation: fadeInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
-  .article > img {
+  .article img {
     background-color: transparent;
     image-rendering: optimizeQuality;
     max-height: 460px;
-    width: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     border-radius: 3px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
   }
-}
+}/*# sourceMappingURL=productos.css.map */
